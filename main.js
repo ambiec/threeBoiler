@@ -12,11 +12,12 @@ const camera = new THREE.PerspectiveCamera(
   100
 )
 
+const clock = new THREE.Clock()
 const controls = new OrbitControls(camera, renderer.domElement) //orbit camera
 controls.enableDamping = true
 controls.dampingFactor = 0.08
-// controls.enablePan = false
-// controls.enableZoom = false
+controls.enablePan = false
+controls.enableZoom = false
 const scene = new THREE.Scene()
 const meshes = {}
 const lights = {}
